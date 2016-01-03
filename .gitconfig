@@ -1,9 +1,13 @@
 [user]
 	name = Noam Chitayat
+[github]
+	user = noam-c
 [filter "lfs"]
 	clean = git lfs clean %f
 	smudge = git lfs smudge %f
 	required = true
+[alias]
+	st = status
 [core]
 	editor = vim
 [push]
