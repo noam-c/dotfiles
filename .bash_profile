@@ -7,6 +7,6 @@ export CC=clang
 export CXX=clang++
 
 # More thorough ls by default
-alias ls="ls -ahl"
+alias ls="ls -ahlrt"
 
 export PS1='C:/\w/$(__git_ps1 " [%s]")> ' # ;)
