@@ -21,6 +21,7 @@ Plugin 'fatih/vim-go'
 Plugin 'AndrewRadev/linediff.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -43,6 +44,13 @@ syntax on
 
 " Add Silver Searcher support via ack.vim plugin
 let g:ackprg = 'ag --nogroup --nocolor --column'
+
+" CtrlP should ignore certain files and directories
+" that aren't typically edited
+let g:ctrlp_custom_ignore = {
+      \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+      \ 'file': '\v\.(o|so|a|d)$'
+      \ }
 
 " Search aliases. Bang means don't immediately jump to the first result.
 cnoreabbrev Ag Ack!
