@@ -21,6 +21,7 @@ Plugin 'fatih/vim-go'
 Plugin 'AndrewRadev/linediff.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'rdnetto/YCM-Generator'
 Plugin 'ctrlpvim/ctrlp.vim'
 
 " All of your Plugins must be added before the following line
@@ -44,6 +45,10 @@ syntax on
 
 " Add Silver Searcher support via ack.vim plugin
 let g:ackprg = 'ag --nogroup --nocolor --column'
+
+" Pick up YCM configs silently and default to a global file provided by YCM
+let g:ycm_global_ycm_extra_conf = '.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_extra_conf_globlist = ['~/src/*','!~/*']
 
 " CtrlP should ignore certain files and directories
 " that aren't typically edited
