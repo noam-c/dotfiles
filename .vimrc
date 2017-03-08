@@ -19,6 +19,7 @@ Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'groenewege/vim-less'
 Plugin 'fatih/vim-go'
 Plugin 'AndrewRadev/linediff.vim'
+Plugin 'mileszs/ack.vim'
 Plugin 'tpope/vim-fugitive'
 
 " All of your Plugins must be added before the following line
@@ -39,6 +40,13 @@ filetype plugin indent on    " required
 " General settings
 colorscheme distinguished
 syntax on
+
+" Add Silver Searcher support via ack.vim plugin
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
+" Search aliases. Bang means don't immediately jump to the first result.
+cnoreabbrev Ag Ack!
+cnoreabbrev Ack Ack!
 
 set expandtab
 set hlsearch
