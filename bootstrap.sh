@@ -19,3 +19,6 @@ vim +PluginInstall +qall
 # Install tmux
 brew install tmux
 cp ./.tmux.conf ~/
+
+# Install Hub
+brew install hub
