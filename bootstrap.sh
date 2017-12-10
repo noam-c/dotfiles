@@ -27,13 +27,13 @@ brew install tmux
 SCRIPT_DIR=$(dirname "$0")
 ABS_SCRIPT_DIR=$(cd $SCRIPT_DIR; pwd)
 
-ln -Fvs $ABS_SCRIPT_DIR/.bash_profile ~/.bash_profile
-ln -Fvs $ABS_SCRIPT_DIR/.gitconfig ~/.gitconfig
-ln -Fvs $ABS_SCRIPT_DIR/.vimrc ~/.vimrc
-ln -Fvs $ABS_SCRIPT_DIR/.tmux.conf ~/.tmux.conf
+ln -Fvs $ABS_SCRIPT_DIR/bash_profile ~/.bash_profile
+ln -Fvs $ABS_SCRIPT_DIR/gitconfig ~/.gitconfig
+ln -Fvs $ABS_SCRIPT_DIR/vimrc ~/.vimrc
+ln -Fvs $ABS_SCRIPT_DIR/tmux.conf ~/.tmux.conf
 
-cp ./.git-prompt.sh ~/.git-prompt.sh
-cp ./.git-completion.bash ~/.git-completion.bash
+cp ./git-prompt.sh ~/.git-prompt.sh
+cp ./git-completion.bash ~/.git-completion.bash
 
 # Install VIM plugins
 vim +PluginInstall +qall
