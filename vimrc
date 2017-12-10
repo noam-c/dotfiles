@@ -61,6 +61,12 @@ let g:ctrlp_custom_ignore = {
 cnoreabbrev Ag Ack!
 cnoreabbrev Ack Ack!
 
+" Highlight trailing whitespace in red
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+
 set expandtab
 set hlsearch
 set ignorecase
