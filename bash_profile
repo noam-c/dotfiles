@@ -11,7 +11,6 @@ export CXX=clang++
 
 # More thorough ls by default
 alias ls="ls -ahlrt"
-alias git="hub"
 
 export PS1='C:/\w/$(__git_ps1 " [%s]")> ' # ;)
 
