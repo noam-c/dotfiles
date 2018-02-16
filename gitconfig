@@ -9,6 +9,7 @@
 [alias]
 	co = checkout
 	st = status
+	sdiff = diff --staged
 [core]
 	editor = vim
 [push]

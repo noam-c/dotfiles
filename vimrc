@@ -24,6 +24,7 @@ Plugin 'mileszs/ack.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'rdnetto/YCM-Generator'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'isRuslan/vim-es6'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -43,6 +44,7 @@ filetype plugin indent on    " required
 " General settings
 colorscheme distinguished
 syntax on
+augroup filetype javascript syntax=javascript
 
 " Add Silver Searcher support via ack.vim plugin
 let g:ackprg = 'ag --nogroup --nocolor --column'
