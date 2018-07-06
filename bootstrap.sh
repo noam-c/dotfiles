@@ -11,6 +11,12 @@ backup_old ~/.gitconfig
 backup_old ~/.tmux.conf
 backup_old ~/.vimrc
 
+# Directory for all machine-specific scripts
+mkdir ~/machine
+
+# Directory for SSH keys
+mkdir ~/.ssh
+
 SCRIPT_DIR=$(dirname "$0")
 ABS_SCRIPT_DIR=$(cd $SCRIPT_DIR; pwd)
 
