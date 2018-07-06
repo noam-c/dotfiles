@@ -29,10 +29,17 @@ ln -Fvs $ABS_SCRIPT_DIR/tmux.conf ~/.tmux.conf
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Install helpful utilities
+brew install cmake
+brew install dos2unix
+brew install htop
 brew install hub
-brew install tmux
+brew install iftop
 brew install jq
+brew install nmap
+brew install npm
 brew install telnet
+brew install tmux
+brew install unrar
 
 # VIM settings
 brew install macvim --with-override-system-vim
