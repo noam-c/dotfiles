@@ -51,5 +51,3 @@ cp ./git-completion.bash ~/.git-completion.bash
 # Install VIM plugins
 vim +PluginInstall +qall
 
-pushd ~/.vim/bundle/YouCompleteMe
-./install.py --clang-completer --tern-completer

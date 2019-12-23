@@ -15,7 +15,6 @@ Plugin 'tpope/vim-repeat'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'scrooloose/nerdtree'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'groenewege/vim-less'
 Plugin 'fatih/vim-go'
@@ -25,6 +24,11 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'rdnetto/YCM-Generator'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'isRuslan/vim-es6'
+Plugin 'roxma/nvim-yarp'
+Plugin 'roxma/vim-hug-neovim-rpc'
+Plugin 'Shougo/deoplete.nvim'
+Plugin 'deoplete-plugins/deoplete-go', { 'do': 'make'}
+Plugin 'dag/vim-fish'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -46,12 +50,20 @@ colorscheme distinguished
 syntax on
 augroup filetype javascript syntax=javascript
 
+" Deoplete options
+let g:deoplete#enable_at_startup = 1
+
+set completeopt-=preview
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<S-TAB>"
+
+let g:deoplete#sources#go#gocode_binary=$GOPATH.'/bin/gocode'
+let g:deoplete#sources#go#builtin_objects=1
+let g:deoplete#sources#go#fallback_to_source=1
+let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
+
 " Add Silver Searcher support via ack.vim plugin
 let g:ackprg = 'ag --nogroup --nocolor --column'
-
-" Pick up YCM configs silently and default to a global file provided by YCM
-let g:ycm_global_ycm_extra_conf = '.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-let g:ycm_extra_conf_globlist = ['~/src/*','!~/*']
 
 " CtrlP should ignore certain files and directories
 " that aren't typically edited
