@@ -16,3 +16,8 @@ export PS1='C:/\w/$(__git_ps1 " [%s]")> ' # ;)
 
 # Alias hub as git
 eval "$(hub alias -s)"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# Set up direnv for directory-specific environment variables
+eval "$(direnv hook bash)"

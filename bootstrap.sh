@@ -30,6 +30,8 @@ ln -Fvs $ABS_SCRIPT_DIR/tmux.conf ~/.tmux.conf
 
 # Install helpful utilities
 brew install cmake
+brew install csvkit
+brew install direnv
 brew install dos2unix
 brew install htop
 brew install hub
