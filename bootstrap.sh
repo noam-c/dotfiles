@@ -51,5 +51,5 @@ cp ./git-prompt.sh ~/.git-prompt.sh
 cp ./git-completion.bash ~/.git-completion.bash
 
 # Install VIM plugins
-vim +PluginInstall +qall
+vim +PluginInstall +GoInstallBinaries +qall
 
