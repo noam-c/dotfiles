@@ -1,4 +1,3 @@
-fundle install
 
 # Use clang instead of g++ for C/C++
 set -x CC clang
