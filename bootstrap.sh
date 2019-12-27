@@ -60,7 +60,7 @@ echo /usr/local/bin/fish | sudo tee -a /etc/shells
 chsh -s /usr/local/bin/fish
 
 # VIM settings
-brew install macvim --with-override-system-vim
+brew install macvim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # Install VIM plugins
