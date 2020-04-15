@@ -42,6 +42,7 @@ brew install jq
 brew install nmap
 brew install npm
 brew install telnet
+brew install the_silver_searcher
 brew install tmux
 brew install unrar
 
