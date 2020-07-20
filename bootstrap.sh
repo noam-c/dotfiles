@@ -35,8 +35,8 @@ brew install cmake
 brew install csvkit
 brew install direnv
 brew install dos2unix
+brew install gh
 brew install htop
-brew install hub
 brew install iftop
 brew install jq
 brew install nmap

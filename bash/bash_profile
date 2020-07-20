@@ -14,8 +14,5 @@ alias ls="ls -ahlrt"
 
 export PS1='C:/\w/$(__git_ps1 " [%s]")> ' # ;)
 
-# Alias hub as git
-eval "$(hub alias -s)"
-
 # Set up direnv for directory-specific environment variables
 eval "$(direnv hook bash)"
