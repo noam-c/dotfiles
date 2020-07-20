@@ -5,5 +5,9 @@
     "git",
     "jobs",
     "root"
-  ]
+  ],
+  "cwd": {
+    "full_cwd": true,
+    "max_dir_size": 3
+  }
 }
