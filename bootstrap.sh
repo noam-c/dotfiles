@@ -63,6 +63,7 @@ ABS_SCRIPT_DIR=$(cd $SCRIPT_DIR; pwd)
 
 ln -Fvs $ABS_SCRIPT_DIR/bash/bash_profile ~/.bash_profile
 ln -Fvs $ABS_SCRIPT_DIR/git/gitconfig ~/.gitconfig
+ln -Fvs $ABS_SCRIPT_DIR/git/gitignore_global ~/.gitignore_global
 ln -Fvs $ABS_SCRIPT_DIR/git-prompt.sh ~/.git-prompt.sh
 ln -Fvs $ABS_SCRIPT_DIR/git-completion.bash ~/.git-completion.bash
 ln -Fvs $ABS_SCRIPT_DIR/vim/vimrc ~/.vimrc

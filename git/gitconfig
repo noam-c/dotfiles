@@ -17,6 +17,8 @@
 	editor = vim
 [push]
 	default = current
+[core]
+  excludesfile = ~/.gitignore_global
 [include]
 	path = ~/machine/gitconfig
 [rerere]
