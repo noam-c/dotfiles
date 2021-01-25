@@ -5,7 +5,7 @@ python3 -m ensurepip
 python3 -m pip install -U pip
 
 # Install Homebrew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # Install helpful utilities
 brew install cmake
