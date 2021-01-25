@@ -12,6 +12,7 @@ brew install cmake
 brew install csvkit
 brew install direnv
 brew install dos2unix
+brew install --cask flux
 brew install gh
 brew install htop
 brew install iftop
