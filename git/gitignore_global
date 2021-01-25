@@ -1,1 +1,5 @@
+# OS X cruft
 .DS_Store
+
+# VIM swap files
+[._]*.sw[a-p]
