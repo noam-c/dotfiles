@@ -1,32 +1,5 @@
 #!/bin/sh
 
-mkdir -p ~/dotfiles_old
-
-backup_old() {
-	[ -e $1 ]  && cp $1 ~/dotfiles_old/
-}
-
-backup_old ~/.bash_profile
-backup_old ~/.gitconfig
-backup_old ~/.tmux.conf
-backup_old ~/.vimrc
-
-# Directory for all machine-specific scripts
-mkdir ~/machine
-
-# Directory for SSH keys
-mkdir ~/.ssh
-
-SCRIPT_DIR=$(dirname "$0")
-ABS_SCRIPT_DIR=$(cd $SCRIPT_DIR; pwd)
-
-ln -Fvs $ABS_SCRIPT_DIR/bash/bash_profile ~/.bash_profile
-ln -Fvs $ABS_SCRIPT_DIR/git/gitconfig ~/.gitconfig
-ln -Fvs $ABS_SCRIPT_DIR/git-prompt.sh ~/.git-prompt.sh
-ln -Fvs $ABS_SCRIPT_DIR/git-completion.bash ~/.git-completion.bash
-ln -Fvs $ABS_SCRIPT_DIR/vim/vimrc ~/.vimrc
-ln -Fvs $ABS_SCRIPT_DIR/tmux/tmux.conf ~/.tmux.conf
-
 # Install Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
@@ -64,6 +37,32 @@ chsh -s /usr/local/bin/fish
 brew install macvim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
+mkdir -p ~/dotfiles_old
+
+backup_old() {
+	[ -e $1 ]  && cp $1 ~/dotfiles_old/
+}
+
+backup_old ~/.bash_profile
+backup_old ~/.gitconfig
+backup_old ~/.tmux.conf
+backup_old ~/.vimrc
+
+# Directory for all machine-specific scripts
+mkdir ~/machine
+
+# Directory for SSH keys
+mkdir ~/.ssh
+
+SCRIPT_DIR=$(dirname "$0")
+ABS_SCRIPT_DIR=$(cd $SCRIPT_DIR; pwd)
+
+ln -Fvs $ABS_SCRIPT_DIR/bash/bash_profile ~/.bash_profile
+ln -Fvs $ABS_SCRIPT_DIR/git/gitconfig ~/.gitconfig
+ln -Fvs $ABS_SCRIPT_DIR/git-prompt.sh ~/.git-prompt.sh
+ln -Fvs $ABS_SCRIPT_DIR/git-completion.bash ~/.git-completion.bash
+ln -Fvs $ABS_SCRIPT_DIR/vim/vimrc ~/.vimrc
+ln -Fvs $ABS_SCRIPT_DIR/tmux/tmux.conf ~/.tmux.conf
+
 # Install VIM plugins
 vim +PluginInstall +GoInstallBinaries +qall
-
